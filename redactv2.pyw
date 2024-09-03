@@ -20,7 +20,8 @@ def redact_snort_log():
     root = tk.Tk()
     root.withdraw()  # Hide the root window
 
-    base_directory = os.path.abspath('C:/Users/User/Documents/snort logs')
+    # Designate your folder that your files will be in to redact
+    base_directory = os.path.abspath('Choose/Your/Folder')
     while True:
         input_file = os.path.abspath(filedialog.askopenfilename(title="Select the log file to redact"))
         if os.path.commonpath([base_directory]) == os.path.commonpath([base_directory, input_file]):
